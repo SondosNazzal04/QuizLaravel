@@ -14,6 +14,11 @@ class Lecture extends Model
         'hall_name',
         'scheduled_at'
     ];
+
+    protected $casts = [
+        'scheduled_at' => 'datetime'
+    ];
+    
     public function course() {
         return $this->belongsTo(Course::class);
     }

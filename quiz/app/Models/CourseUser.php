@@ -15,6 +15,10 @@ class CourseUser extends Model
         'grade'
     ];
 
+    protected $casts = [
+        'enrollment_date' => 'datetime'
+    ];
+
     public function user() {
         return $this->belongsTo(User::class);
     }
